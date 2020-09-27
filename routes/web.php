@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('register.register');
 });
+
+
+Route::get('/register/selects',
+        'Web\RegisterController@getSelects'
+)->name('register_selects');
